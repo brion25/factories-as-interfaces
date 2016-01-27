@@ -65,4 +65,4 @@ Of course there're advantages:
         }]);
 </script>
 ```
-  As you might see, I changed `is` for `lodash` I just change the Factory, there's no need to change the controller, because the **Factory** is working as **an interface** between the controller.
+  As you might see, I changed `is` for `lodash`, I just change the Factory, there's no need to change the controller, because the **Factory** is working as **an interface** between the controller.
