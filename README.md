@@ -2,6 +2,12 @@
 
 ![Kyubi sharing chakra](https://raw.github.com/brion25/factories-as-interfaces/master/assets/chakra.png)
 
+## Demo
+
+See the [living demo](http://plnkr.co/edit/S5CX0Y?p=preview)
+
+## Overview
+
 Let's imagine you want o use the library: [`is`](https://arasatasaygin.github.io/is.js/) in an Angular Application, you can say, "hey! I just need to load it before my angular App"
 ```
 <script src="https://cdnjs.cloudflare.com/ajax/libs/is_js/0.8.0/is.min.js"></script>
