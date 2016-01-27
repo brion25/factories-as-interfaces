@@ -10,7 +10,7 @@ Let's imagine you want o use the library: [`is`](https://arasatasaygin.github.io
     angular.module('myApp',[])
         .controller('myCtrl',function(){
             var vm = this;
-            if(is.email(vm.email)) console.log('Yup!');
+            if(is.equal(vm.var1,vm.var2)) console.log('Yup!');
         });
 </script>
 ```
@@ -43,20 +43,20 @@ Of course there're advantages:
 - **Unit Testing** - Unit testing is easier, because now we can mock that factory and perform unit testing as it is, testing in isolation, without hard dependencies
 - **Bindings** - Now Angular knows your external library exists, so it will manage the bindings as it normally does, without any `$scope.$digest()`
 - **Dependency almost erased** - I said almost, because still we're depending on the library of `is.js`, but now we can change the library any time we want, because we have the interface ready,ex:
-  ```
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.0.1/lodash.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
-    <script>
-        angular.module('myApp',[])
-            .factory('isFactory',function(){
-                return {
-                    equal : _.isEqual
-                };
-            })
-            .controller('myCtrl',['isFactory',function(is){
-                var vm = this;
-                if(is.equal(vm.var1,vm.var2)) console.log('Yup!');
-            }]);
-    </script>
-  ```
+```
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.0.1/lodash.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
+<script>
+    angular.module('myApp',[])
+        .factory('isFactory',function(){
+            return {
+                equal : _.isEqual
+            };
+        })
+        .controller('myCtrl',['isFactory',function(is){
+            var vm = this;
+            if(is.equal(vm.var1,vm.var2)) console.log('Yup!');
+        }]);
+</script>
+```
   As you might see, I changed `is` for `lodash` I just change the Factory, there's no need to change the controller, because the **Factory** is working as **an interface** between the controller.
