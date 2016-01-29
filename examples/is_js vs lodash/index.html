@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/jasmine.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body ng-app="myApp" ng-controller="myCtrl as ctrl">
+    <div>
+      <label for="strOne">String 1</label>
+      <input id="strOne" ng-model="ctrl.one" />
+    </div>
+    <div>
+      <label for="strTwo">String 2</label>
+      <input id="strTwo" ng-model="ctrl.two" />
+    </div>
+    <button ng-click="ctrl.validateStr()">Validate Strings</button>
+    <div ng-class="{'not-validated' : (ctrl.areTheyEqual === undefined),'not-equal' : (ctrl.areTheyEqual === false), 'equal' : ctrl.areTheyEqual}">
+      <span ng-bind="(ctrl.areTheyEqual === undefined) ? 'Please click on validate Strings':(ctrl.areTheyEqual)?'They are equal!':'Sorry they are different...'"></span>
+    </div>
+    <script data-require="angular.js@1.4.7" data-semver="1.4.7" src="https://code.angularjs.org/1.4.7/angular.js"></script>
+    <script data-require="lodash.js@*" data-semver="3.10.0" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.0/lodash.js"></script>
+    <script data-require="is.js@*" data-semver="0.7.3" src="https://cdnjs.cloudflare.com/ajax/libs/is_js/0.8.0/is.js"></script>
+    <script src="script.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/jasmine.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/jasmine-html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.4.1/boot.min.js"></script>
+    <script src="test.js"></script>
+  </body>
+
+</html>

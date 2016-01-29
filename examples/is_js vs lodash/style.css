@@ -1,0 +1,23 @@
+/* Styles go here */
+
+.not-validated{
+  background-color:yellow;
+}
+
+.equal{
+  background-color:green;
+}
+
+.not-equal{
+  background-color:red;
+}
+
+.equal, .not-equal{
+  color:white;
+}
+
+.equal, .not-equal,.not-validated{
+  margin-bottom:15px;
+  margin-top:5px;
+  padding:0.5em;
+}

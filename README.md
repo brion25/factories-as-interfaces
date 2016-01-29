@@ -4,7 +4,10 @@
 
 ## Demo
 
-See the [living demo](http://plnkr.co/edit/S5CX0Y?p=preview)
+See the living demos:
+
+- [AJAX demo](http://plnkr.co/edit/S5CX0Y?p=preview)
+- [is_js vs lodash demo](http://plnkr.co/edit/B8qsBT?p=preview)
 
 ## Overview
 
